@@ -1,14 +1,19 @@
 window.onload = function() {
-  setInterval(function() {
-    document.getElementById("myAudio").play();
-    // var oLink = document.getElementById('link');
-    // oLink.addEventListener('click', editContent);
+  
 
-    // function editContent() {
-    //   document.getElementById("myAudio").pause();
-    //   document.getElementById("myAudio").currentTime = 0;
-    // }
-    // let randomText = quoteText[Math.round(Math.random()*6)];
+  const el = document.getElementById("playMusic");
+  el.addEventListener("click", function(){
+    document.getElementById("myAudio").play();
+  }
+
+  , false);
+
+  // playMusic.addEventListener('click',function(e){
+  //   document.getElementById("myAudio").play();
+  // })
+  
+  setInterval(function() {
+    
     let randomText = quoteText[Math.floor( Math.random()* quoteText.length )];
 
     //generate random red, green and blue intensity
